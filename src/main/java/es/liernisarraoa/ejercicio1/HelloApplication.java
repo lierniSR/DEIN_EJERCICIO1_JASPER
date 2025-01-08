@@ -17,19 +17,14 @@ import java.sql.DriverManager;
 
 public class HelloApplication extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage stage) {
         visualizarReporte();
     }
 
     private void visualizarReporte() {
         try {
             // Ruta del archivo Jasper (compilado)
-            String reportPath = String.valueOf(HelloApplication.class.getResource("Ejercicio1.jasper"));
+            String reportPath = "C:\\DM2\\DEIN\\ProyectoFXJasper\\Ejercicio1\\src\\main\\resources\\es\\liernisarraoa\\ejercicio1\\Jasper\\Ejercicio1.jasper";
 
             // Cargar el archivo Jasper
             JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile(reportPath);
@@ -48,7 +43,7 @@ public class HelloApplication extends Application {
             JasperViewer.viewReport(jasperPrint, false);
 
             // Exportar a PDF (opcional)
-            JasperExportManager.exportReportToPdfFile(jasperPrint, "report.pdf");
+            JasperExportManager.exportReportToPdfFile(jasperPrint, "reporte.pdf");
 
             connection.close();
         } catch (Exception e) {
