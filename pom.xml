@@ -83,7 +83,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>es.liernisarraoa.ejercicio1/es.liernisarraoa.ejercicio1.HelloApplication
+                            <mainClass>es.liernisarraoa.ejercicio1/es.liernisarraoa.ejercicio1.Ejercicio1
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

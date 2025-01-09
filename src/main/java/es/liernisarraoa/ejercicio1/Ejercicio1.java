@@ -1,8 +1,6 @@
 package es.liernisarraoa.ejercicio1;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
@@ -11,11 +9,10 @@ import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.util.JRLoader;
 import net.sf.jasperreports.view.JasperViewer;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class HelloApplication extends Application {
+public class Ejercicio1 extends Application {
     @Override
     public void start(Stage stage) {
         visualizarReporte();
